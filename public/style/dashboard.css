@@ -1,0 +1,323 @@
+/* Colour variable */
+:root {
+  --color-brand-primary: #609966;
+  --color-brand-secondary: #9dc08b;
+  --color-section-dark: #40513b;
+  --color-background-main: #edf1d6;
+  --color-text-default: #000000;
+  --color-white: #ffffff;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+}
+
+/* Default Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-background-main);
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Navigasi */
+.container-navigation {
+  background-color: var(--color-section-dark);
+  width: 250px;
+  min-width: 200px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-navigation {
+  color: var(--color-white);
+  text-align: center;
+  padding: 0 10px;
+}
+
+nav {
+  width: 90%;
+  padding-left: 10px;
+}
+
+li {
+  list-style-type: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+li a {
+  text-decoration: none;
+  color: var(--color-white);
+  display: block; 
+}
+/* End of Navigasi */
+
+/* Wadah Utama */
+.container-content {
+  display: flex;
+  flex-direction: column;
+  /* Konten utama mengambil sisa lebar */
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container {
+  /* Kontainer form */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--color-section-dark);
+  margin-bottom: 5px;
+}
+
+/* Form */
+#kursusForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.form-column {
+  flex: 1 1 45%;
+  min-width: 280px; 
+}
+
+/* Input Styles */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--color-section-dark);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px rgba(96, 153, 102, 0.2);
+  outline: none;
+}
+
+
+#deskripsi {
+  min-height: 120px;
+  resize: none;
+}
+
+/* Tombol Submit dan Batal */
+#submitButton,
+#cancelEditButton {
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  /* Pastikan tombol berada di bawah kedua kolom */
+  align-self: flex-start;
+}
+
+#submitButton:hover {
+  background-color: var(--color-section-dark);
+}
+
+#cancelEditButton {
+  background-color: var(--color-info); 
+  margin-left: 10px;
+}
+
+#cancelEditButton:hover {
+  background-color: #0b93a8;
+}
+
+/* Message Area */
+#message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  flex-basis: 100%; 
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Table kursus */
+.container-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#tabelKursus {
+  width: 100%;
+  border-collapse: separate; /* Menggunakan separate untuk border-radius */
+  border-spacing: 0;
+  margin-top: 20px;
+  background: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Penting untuk radius sudut tabel */
+}
+
+#tabelKursus th,
+#tabelKursus td {
+  border: none; /* Hilangkan border individual */
+  padding: 15px 12px;
+  text-align: left;
+}
+
+#tabelKursus th {
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Garis pemisah antar baris */
+#tabelKursus tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+#tabelKursus tbody tr:last-child {
+  border-bottom: none;
+}
+
+#tabelKursus tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#tabelKursus tbody tr:hover {
+  background-color: var(--color-background-main);
+  transition: background-color 0.2s;
+}
+
+/* Tombol Aksi */
+.btn-edit,
+.btn-hapus {
+  padding: 8px 15px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--color-white);
+  font-weight: 500;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: #28a745;
+}
+.btn-hapus {
+  background-color: var(--color-danger);
+}
+
+.btn-edit:hover,
+.btn-hapus:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* Sidebar menjadi Header di Mobile */
+  .container-navigation {
+    width: 100%;
+    height: auto;
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  nav {
+    width: auto;
+    padding-left: 0;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  li {
+    padding: 5px 8px;
+  }
+
+  .container-content {
+    padding: 15px;
+  }
+
+  #kursusForm {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-column {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  #submitButton,
+  #cancelEditButton {
+    width: 100%;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,495 @@
+/* Colour variable */
+:root {
+  --color-brand-primary: #609966;
+  --color-brand-secondary: #9dc08b;
+  --color-section-dark: #40513b;
+  --color-background-main: #edf1d6;
+  --color-text-default: #000000;
+  --color-white: #ffffff;
+}
+
+/* Default Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styling Navbar */
+.navbar {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+}
+
+.navbar li a {
+  color: var(--color-text-default);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar a.active {
+  color: var(--color-brand-primary);
+}
+
+#disappear {
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--color-brand-primary);
+}
+
+#disappear > a {
+  color: var(--color-white);
+}
+
+#disappear a:hover {
+  color: var(--color-background-main);
+}
+
+/* Hero Section*/
+.container-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  padding: 0 120px;
+  height: 100vh;
+  margin-top: 5vh;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(60px);
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 4vw;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--color-text-default);
+  margin-bottom: 10px;
+}
+
+.hero-text > .hero-desc {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--font-color);
+  line-height: 1.6;
+  margin: 10px 0;
+  max-width: 550px;
+}
+
+.color-dark {
+  color: var(--color-text-default);
+}
+
+.color-accent {
+  color: var(--color-brand-primary);
+}
+
+.daftar-btn {
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  min-width: 160px;
+  min-height: 50px;
+  width: 180px;
+}
+
+.daftar-btn:hover {
+  background-color: var(--color-brand-secondary);
+}
+
+.daftar-btn a {
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: fadeInRight 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animasi Keyframes */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* End Of Hero Section */
+
+/* Container Card */
+.container-card {
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 25px;
+  background-color: var(--color-background-main);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-brand-primary);
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--color-text-default);
+}
+/* End of Styling Container Card */
+
+/* Simple Portal Styling */
+/* ===== CTA PORTAL (di bawah modul) ===== */
+.cta-portal {
+  width: 100%;
+  background-color: var(--color-background-main);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-inner {
+  width: 85%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Teks */
+.cta-text h2 {
+  margin: 0 0 8px;
+  color: var(--color-section-dark);
+  font-size: 1.6rem;
+}
+
+.cta-text p {
+  margin: 0;
+  color: var(--color-text-default);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+/* Tombol aksi */
+.cta-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+/* Primary = menuju About */
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  box-shadow: 0 6px 14px rgba(96, 153, 102, 0.18);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(96, 153, 102, 0.22);
+}
+
+/* Secondary = lihat kelas */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-section-dark);
+  border: 2px solid rgba(64, 81, 59, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-primary);
+}
+/* End of Simple Portal Styling */
+
+/* Pre Footer Styling*/
+.pre-footer {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  padding: 40px 80px;
+  background-color: var(--color-background-main);
+  gap: 20px;
+}
+
+.institution-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imginstitute-section {
+  min-width: 100px;
+  width: 160px;
+}
+
+#img-institution {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--color-text-default);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--color-brand-primary);
+  width: auto;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+/* Responsive */
+/* Extra small devices (phones) */
+@media (max-width: 600px) {
+  #disappear {
+    display: none;
+  }
+
+  #disappear-teks {
+    display: none;
+  }
+
+  .container-hero {
+    flex-direction: column-reverse;
+    gap: 10vh;
+  }
+
+  .container-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .container-hero #hero-desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .daftar-btn a {
+    font-size: 1rem;
+  }
+
+  /* Container Card */
+  .container-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 40px;
+    padding: 30px 0;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+  }
+
+  /* Pre Footer */
+  .pre-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .institution-info {
+    width: 80%;
+  }
+
+  .imginstitute-section {
+    width: 140px;
+  }
+
+  #img-institution {
+    width: 80%;
+  }
+
+  /* Footer */
+  .footer {
+    height: 6vh;
+  }
+}
+
+/* Small devices (tablets) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .container-hero {
+    flex-direction: column-reverse;
+  }
+  .container-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 40px;
+    padding: 30px 0;
+  }
+
+  .hero-text,
+  .hero-image {
+    transform: none;
+    opacity: 1;
+    animation: none; /* matikan animasi di layar kecil */
+  }
+}
+
+/* Medium devices (landscape tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .container-hero {
+    flex-direction: column-reverse;
+  }
+
+  .container-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 40px;
+    height: 100vh;
+    padding-bottom: 40px;
+  }
+
+  .cta-portal {
+    margin-top: 15vh;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+
+  /* .pre-footer {
+    margin-top: 10vh;
+  } */
+}

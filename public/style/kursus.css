@@ -1,0 +1,259 @@
+/* Colour variable */
+:root {
+  --color-brand-primary: #609966;
+  --color-brand-secondary: #9dc08b;
+  --color-section-dark: #40513b;
+  --color-background-main: #edf1d6;
+  --color-text-default: #000000;
+  --color-white: #ffffff;
+}
+
+/* Default Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styling Navbar */
+.navbar {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+}
+
+.navbar li a {
+  color: var(--color-text-default);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar a.active {
+  color: var(--color-brand-primary);
+}
+
+#disappear {
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--color-brand-primary);
+}
+
+#disappear > a {
+  color: var(--color-white);
+}
+
+#disappear a:hover {
+  color: var(--color-background-main);
+}
+/* End of Styling Navbar */
+
+/* Container courses Styling */
+.container-courses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 90px 0;
+  padding: 45px;
+}
+
+.courses {
+  background-color: var(--color-background-main);
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 10px;
+  margin: 30px, 0;
+}
+
+#title-page {
+  font-weight: 700;
+  font-size: 24px;
+}
+/* End of Container courses Styling */
+
+/* Container-card Styling */
+.kursus-card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 60vh;
+}
+
+.kursus-card > .kursus-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kursus-content {
+  width: 100%;
+}
+
+.kursus-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.daftar-button {
+  background-color: var(--color-brand-primary);
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 40%;
+  height: 30px;
+  text-align: center;
+}
+
+.daftar-button > a {
+  color: var(--color-white);
+}
+
+.daftar-button > a:hover {
+  color: #cdcccc;
+}
+
+/* End of Container-card Styling */
+
+/* Pre Footer Styling*/
+
+.pre-footer {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  padding: 40px 80px;
+  background-color: var(--color-background-main);
+  gap: 20px;
+}
+
+.institution-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imginstitute-section {
+  min-width: 100px;
+  width: 160px;
+}
+
+#img-institution {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--color-text-default);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--color-brand-primary);
+  width: auto;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+/* Responsive */
+
+/* Extra small devices (phones) */
+@media (max-width: 600px) {
+  .courses {
+    background-color: var(--color-white);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .kursus-card {
+    background-color: var(--color-background-main);
+  }
+
+  #disappear {
+    display: none;
+  }
+
+  /* Pre Footer */
+  .pre-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .institution-info {
+    width: 80%;
+  }
+
+  .imginstitute-section {
+    width: 140px;
+  }
+
+  #img-institution {
+    width: 80%;
+  }
+
+  /* Footer */
+  .footer {
+    height: 6vh;
+  }
+}
+
+/* Small devices (tablets) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .courses {
+    background-color: var(--color-white);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Medium devices (landscape tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .courses {
+    background-color: var(--color-white);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

@@ -1,0 +1,143 @@
+/* Colour variable */
+:root {
+  --color-brand-primary: #609966;
+  --color-brand-secondary: #9dc08b;
+  --color-section-dark: #40513b;
+  --color-background-main: #edf1d6;
+  --color-text-default: #000000;
+  --color-white: #ffffff;
+  --color-error: #d63031;
+}
+
+/* Default Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== FORM SECTION ===== */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  gap: 5vw;
+}
+
+.container-illustration {
+  width: 40%;
+}
+
+.container-illustration img {
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 5px;
+}
+
+.container-form {
+  max-width: 800px;
+  max-height: 800px;
+  width: 60%;
+  border-radius: 20px;
+  padding: 80px;
+}
+
+#form-title {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 0.25px solid var(--color-text-default);
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-brand-primary);
+  background-color: var(--color-white);
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--color-brand-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--color-brand-secondary);
+}
+
+/* Responsive */
+/* Extra small devices (phones) */
+@media (max-width: 600px) {
+  .container-form {
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #illus-disappear {
+    display: none;
+  }
+}
+
+/* Small devices (tablets) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .container-form {
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 80px;
+  }
+
+  #illus-disappear {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .container-form {
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 80px;
+  }
+
+  #illus-disappear {
+    display: none;
+  }
+}

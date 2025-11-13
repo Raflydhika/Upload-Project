@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas SkillTanam</title>
+    <link rel="stylesheet" href="/style/kursus.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="/beranda.html">Beranda</a></li>
+        <li><a href="#" class="active">Kelas</a></li>
+        <li><a href="/tentang.html">Tentang</a></li>
+        <li id="disappear"><a href="/form.html" class="daftar">Daftar</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section Courses -->
+    <div class="container-courses">
+      <header id="title-page">SkillTanam Courses</header>
+      <!-- Konten Pendaftaran Kursus akan disuntikkan di sini oleh kursus.js -->
+      <div class="courses" id="list-kursus-container">
+        <!-- Loader atau pesan sementara sebelum data dimuat -->
+        <p>Memuat daftar kursus, mohon tunggu...</p>
+      </div>
+    </div>
+    <!-- End of Section Courses -->
+
+    <!-- Section Information -->
+    <div class="pre-footer">
+      <div class="institution-info">
+        <section class="imginstitute-section">
+          <!-- Ganti dengan path logo Anda yang benar jika berbeda -->
+          <img src="/assets/courseLogo.png" alt="Logo SkillTanam" id="img-institution" />
+        </section>
+        <section class="descinstitute-section">
+          <h3>SkillTanam</h3>
+          <p>Jl. Margonda Raya 100, Depok</p>
+        </section>
+      </div>
+
+      <div class="social-links">
+        <a href="#"> <i class="fab fa-youtube"></i> YouTube </a>
+
+        <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+      </div>
+    </div>
+
+    <!-- End of Section Team -->
+
+    <div class="footer">
+      <p>© 2025 SkillTanam. All rights reserved.</p>
+    </div>
+
+    <!-- Skrip JAVASCRIPT untuk mengambil dan menampilkan data kursus -->
+    <script src="/js/kursus.js"></script>
+  </body>
+</html>
